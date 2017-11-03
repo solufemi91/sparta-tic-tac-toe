@@ -66,7 +66,6 @@ function computerPlayerAlternator(){
 
 
 
-// setBoxesListenersForX()
 
 computerPlayerAlternator()
 

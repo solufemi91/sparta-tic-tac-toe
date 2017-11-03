@@ -14,3 +14,9 @@ Your deliverables:-
 7) The clear button should clear the board
 8) When a winning condition is present you should display a winner, either X or 0
 9) The program should use functions, loops, JQuery selectors and JQuery events
+
+## Things that went well
+
+I managed to get the box to display a different option after each time it was clicked
+
+I also managed to change the text in the top left hand corner to display who's turn it was.
