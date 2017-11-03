@@ -8,7 +8,7 @@ function turnDisplay(){
 }
 
 
-function setBoxesListenersForO(){
+function setBoxesListeners(){
 
 	$('.boxes').click(function(){
 		var myValue = turnDisplay()
@@ -26,8 +26,15 @@ function setBoxesListenersForO(){
 	})
 }
 
+function resetBoardListener(){
+	$('button').click(function(){
+     console.log("Reset")
+		 $(".boxes").html('')
+	})
+}
 
-setBoxesListenersForO()
+setBoxesListeners()
+resetBoardListener()
 
 
 
