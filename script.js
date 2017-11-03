@@ -16,7 +16,7 @@ function playerSelector(){
 function setBoxesListenersForX(){
 
 	$('.boxes').click(function(){
-		$(this).html('O')
+		$(this).html('X')
 		var myValue = turnDisplay()
 		console.log(myValue)
 		if (myValue%2 == 0) {
@@ -55,8 +55,10 @@ function computerPlayerAlternator(){
 		 //console.log(myValue)
 		 if (myValue%2 == 0){
 			 console.log("its even")
+			 setBoxesListenersForO()
 		 } else {
 			 console.log("its odd")
+			 setBoxesListenersForX()
 		 }
 
 	})
@@ -65,8 +67,8 @@ function computerPlayerAlternator(){
 
 
 
-// setBoxesListenersForX()
-setBoxesListenersForO()
+setBoxesListenersForX()
+
 computerPlayerAlternator()
 
 
