@@ -1,9 +1,13 @@
 $(function(event) {
 
-var counter = 0;
+var counterForTurnDisplay = 0;
+var counterForPlayerSelector = 0
 
-function turnCounter(){
-		return counter += 1;
+function turnDisplay(){
+		return counterForTurnDisplay += 1;
+}
+function playerSelector(){
+		return counterForPlayerSelector += 1;
 }
 
 
@@ -12,7 +16,15 @@ function turnCounter(){
 function setBoxesListenersForX(){
 
 	$('.boxes').click(function(){
-		$(this).html('X')
+		$(this).html('O')
+		var myValue = turnDisplay()
+		console.log(myValue)
+		if (myValue%2 == 0) {
+			$('#turn').html('O')
+
+		} else {
+			$('#turn').html('X')
+		}
 	})
 }
 
@@ -23,7 +35,7 @@ function setBoxesListenersForO(){
 	$('.boxes').click(function(){
 		$(this).html('O')
 		// change who's turn it is
-		var myValue = turnCounter()
+		var myValue = turnDisplay()
 		console.log(myValue)
 		if (myValue%2 == 0) {
 			$('#turn').html('O')
@@ -32,22 +44,31 @@ function setBoxesListenersForO(){
 			$('#turn').html('X')
 		}
 
-		//
-		// }
+
 	})
 }
 
 
-//  everytime i click, I want the turns to alternate between x and y
+function computerPlayerAlternator(){
+	$('.boxes').click(function(){
+		 var myValue = playerSelector()
+		 //console.log(myValue)
+		 if (myValue%2 == 0){
+			 console.log("its even")
+		 } else {
+			 console.log("its odd")
+		 }
+
+	})
+}
 
 
 
-setBoxesListenersForX()
+
+// setBoxesListenersForX()
 setBoxesListenersForO()
+computerPlayerAlternator()
 
-//
-
-$
 
 
 
