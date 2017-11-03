@@ -10,7 +10,22 @@ function playerSelector(){
 		return counterForPlayerSelector += 1;
 }
 
+function computerPlayerAlternator(){
+	$('.boxes').click(function(){
+		var myValue = playerSelector()
+		//console.log(myValue)
+		if (myValue%2 == 0){
+			console.log("its even")
+			setBoxesListenersForO()
+		} else {
+			console.log("its odd")
+			setBoxesListenersForX()
+		}
 
+	})
+}
+
+computerPlayerAlternator()
 
 
 function setBoxesListenersForX(){
@@ -48,26 +63,6 @@ function setBoxesListenersForO(){
 }
 
 
-function computerPlayerAlternator(){
-	$('.boxes').click(function(){
-		 var myValue = playerSelector()
-		 //console.log(myValue)
-		 if (myValue%2 == 0){
-			 console.log("its even")
-			 setBoxesListenersForO()
-		 } else {
-			 console.log("its odd")
-			 setBoxesListenersForX()
-		 }
-
-	})
-}
-
-
-
-
-
-computerPlayerAlternator()
 
 
 
