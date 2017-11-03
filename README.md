@@ -15,8 +15,20 @@ Your deliverables:-
 8) When a winning condition is present you should display a winner, either X or 0
 9) The program should use functions, loops, JQuery selectors and JQuery events
 
+
+## What I delivered
+
+I managed to deliver 6/9
+
+
 ## Things that went well
 
 I managed to get the box to display a different option after each time it was clicked
 
 I also managed to change the text in the top left hand corner to display who's turn it was.
+
+I managed to get my reset button to work.
+
+# Things I had issues with
+
+It took me a long time to figure out how to make each boxes alternate between X and O.(See mistake.js file for initial attempt). As a result, I had less time to achieve the remaining deliverables.
