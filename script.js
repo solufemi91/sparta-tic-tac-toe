@@ -34,7 +34,6 @@ function setBoxesListenersForO(){
 
 	$('.boxes').click(function(){
 		$(this).html('O')
-		// change who's turn it is
 		var myValue = turnDisplay()
 		console.log(myValue)
 		if (myValue%2 == 0) {
@@ -67,7 +66,7 @@ function computerPlayerAlternator(){
 
 
 
-setBoxesListenersForX()
+// setBoxesListenersForX()
 
 computerPlayerAlternator()
 
