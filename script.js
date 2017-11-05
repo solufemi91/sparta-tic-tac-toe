@@ -19,6 +19,7 @@ function setBoxesListeners() {
 			$(this).html('O');
 			$('#turn').html('X');
 			combinationsArrayForO.push($(this).attr('data-num'));
+			checkWinningCondition();
 			console.log("player0 " + combinationsArrayForO)
 
 
@@ -56,8 +57,9 @@ function checkWinningCondition(){
 	if(combinationsArrayForX.length > 2)
 
 	{
-  console.log("yes i am working")
-
+  alert(combinationsArrayForX)
+} else if (combinationsArrayForO.length > 2) {
+	alert(combinationsArrayForO)
 }
 
 
