@@ -58,10 +58,9 @@ function checkWinningCondition(){
 
 	{
   alert(combinationsArrayForX)
-} else if (combinationsArrayForO.length > 2) {
+  } else if (combinationsArrayForO.length > 2) {
 	alert(combinationsArrayForO)
-}
-
+ }
 
 
 
