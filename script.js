@@ -2,9 +2,9 @@ $(function(event) {
 
 var counter = 0;
 
-var combinationsArrayForO = [];
+var ArrayForOMoves = [];
 
-var combinationsArrayForX = []
+var ArrayForXMoves = []
 
 function setBoxesListeners() {
 
@@ -18,17 +18,17 @@ function setBoxesListeners() {
 		if (counter%2 == 0) {
 			$(this).html('O');
 			$('#turn').html('X');
-			combinationsArrayForO.push($(this).attr('data-num'));
+			ArrayForOMoves.push($(this).attr('data-num'));
 			checkWinningCondition();
-			console.log("player0 " + combinationsArrayForO)
+			console.log("player0 " + ArrayForOMoves)
 
 
 		} else {
 				$(this).html('X');
 				$('#turn').html('O');
-				combinationsArrayForX.push($(this).attr('data-num'));
+				ArrayForXMoves.push($(this).attr('data-num'));
 				checkWinningCondition();
-				console.log("playerX " + combinationsArrayForX)
+				console.log("playerX " + ArrayForXMoves)
 
 			};
 		}
@@ -42,9 +42,9 @@ function resetBoardListener(){
 	$('button').click(function(){
 
 		 $(".boxes").html('')
-		 combinationsArrayForO = []
+		 ArrayForOMoves = []
 
-		 combinationsArrayForX = []
+		 ArrayForXMoves = []
 
 	})
 }
@@ -54,12 +54,12 @@ function turnDisplay(){
 }
 
 function checkWinningCondition(){
-	if(combinationsArrayForX.length > 2)
+ if(ArrayForXMoves.length > 2)
 
-	{
-  alert(combinationsArrayForX)
-  } else if (combinationsArrayForO.length > 2) {
-	alert(combinationsArrayForO)
+ {
+  alert(ArrayForXMoves)
+  } else if (ArrayForOMoves.length > 2) {
+ alert(ArrayForOMoves)
  }
 
 
