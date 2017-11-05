@@ -1,8 +1,8 @@
 $(function(event) {
 
-var counter= 0;
+var counter = 0;
 
-var combinationsArrayForO = []
+var combinationsArrayForO = [];
 
 var combinationsArrayForX = []
 
@@ -12,6 +12,7 @@ function setBoxesListeners() {
 
 
 		if($(this).html() == ''){
+
 		counter = turnDisplay();
 		// console.log(counter);
 		if (counter%2 == 0) {
@@ -20,11 +21,14 @@ function setBoxesListeners() {
 			combinationsArrayForO.push($(this).attr('data-num'));
 			console.log("player0 " + combinationsArrayForO)
 
+
 		} else {
 				$(this).html('X');
 				$('#turn').html('O');
 				combinationsArrayForX.push($(this).attr('data-num'));
+				checkWinningCondition();
 				console.log("playerX " + combinationsArrayForX)
+
 			};
 		}
 
@@ -49,10 +53,12 @@ function turnDisplay(){
 }
 
 function checkWinningCondition(){
+	if(combinationsArrayForX.length > 2)
 
-	if (combinationsArrayForX == [0,3,6]){
-		alert("player X has won")
-	}
+	{
+  console.log("yes i am working")
+
+}
 
 
 
@@ -63,7 +69,6 @@ setBoxesListeners();
 
 resetBoardListener();
 
-checkWinningCondition()
 
 
 
