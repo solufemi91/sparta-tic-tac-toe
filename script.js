@@ -19,31 +19,36 @@ function setBoxesListeners() {
 		if($(this).html() == ''){
 
 		counter = turnDisplay();
-		// console.log(counter);
+		console.log(counter);
 		if (counter%2 == 0) {
 			$(this).html('O');
 			$('#turn').html('X');
 			ArrayForOMoves.push(parseInt($(this).attr('data-num')));
 			checkWinningCondition(ArrayForOMoves,"O");
-			console.log("player0 " + ArrayForOMoves)
+			// console.log("player0 " + ArrayForOMoves)
 
 
-		} else {
+
+		}
+
+		else if(counter == 9){
+			$('#turn').html("Game Over!");
+			var conf = confirm("It's a draw, do you want to play again?");
+			if(conf){
+				resetBoardListener();
+			}
+
+		}
+
+		else {
 				$(this).html('X');
 				$('#turn').html('O');
 				ArrayForXMoves.push(parseInt($(this).attr('data-num')));
 				checkWinningCondition(ArrayForXMoves,"X");
-				console.log("playerX " + ArrayForXMoves)
+				// console.log("playerX " + ArrayForXMoves)
 
 			};
 
-      if(counter >= 10){
-				$('#turn').html("Game Over!");
-				var conf = confirm("It's a draw, do you want to play again?");
-				if(conf){
-					resetBoardListener();
-				}
-			}
 
 		}
 
