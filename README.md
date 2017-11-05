@@ -31,4 +31,4 @@ I managed to get my reset button to work.
 
 # Things I had issues with
 
-It took me a long time to figure out how to make each boxes alternate between X and O.(See mistake.js file for initial attempt). As a result, I had less time to achieve the remaining deliverables.
+It took me a long time to figure out how to make each boxes alternate between X and O.(See mistake.js file for initial attempt). As a result, I had less time to achieve the remaining deliverables on my initial submission. I however managed to get everything working over the weekend. The main thing that I struggled on was the winning and draw conditions.
