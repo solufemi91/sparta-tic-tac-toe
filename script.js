@@ -36,6 +36,15 @@ function setBoxesListeners() {
 				console.log("playerX " + ArrayForXMoves)
 
 			};
+
+      if(counter >= 10){
+				$('#turn').html("Game Over!");
+				var conf = confirm("It's a draw, do you want to play again?");
+				if(conf){
+					resetBoardListener();
+				}
+			}
+
 		}
 
 
@@ -50,6 +59,12 @@ function resetBoardListener(){
 		 ArrayForOMoves = []
 
 		 ArrayForXMoves = []
+
+		 counter = 0;
+
+		 $('#turn').html("X");
+
+
 
 	})
 }
@@ -67,6 +82,7 @@ function checkWinningCondition(arrayMoves, player){
 			}
 			if(matchCounter === 3){
 				alert("Game over,  " + player + "wins!");
+				counter = 0;
 				resetBoardListener();
 
 			}
