@@ -101,8 +101,4 @@ function checkWinningCondition(arrayMoves, player){
 
 setBoxesListeners();
 
-
-
-
-
 });
